@@ -65,7 +65,8 @@ app.on('activate', function (){
 // for applications and their menu bar to stay active until the user quit
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit()
+  app.quit()
+  // if (process.platform !== 'darwin') app.quit()
 })
 
 app.on('before-quit', function (){
