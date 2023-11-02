@@ -15,3 +15,15 @@ window.addEventListener('DOMContentLoaded', () => {
     replaceText(`${type}-version`, process.versions[type])
   }
 })
+
+const { contextBridge, ipcRenderer } = require('electron')
+contextBridge.exposeInMainWorld('darkMode', {
+    toggle: () => {
+      console.log('toggle')
+      ipcRenderer.invoke('dark-mode:toggle')
+    },
+    system: () => {
+      console.log('system')
+      ipcRenderer.invoke('dark-mode:system')
+    }
+})
