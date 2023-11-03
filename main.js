@@ -11,6 +11,9 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+  
+  // add window icon
+  mainWindow.setIcon(path.join(__dirname, 'assets/logo.png'))
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
