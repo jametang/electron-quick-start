@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>工程造价简易计算器</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column" id="column1">
+            <div class="content-display">
+                <h2>Category List</h2>
+            </div>
+            <!-- 第一列内容 -->
+            <ul class="hierarchy-list">
+                <li>Level 1</li>
+                <li>Level 2</li>
+                <li>Level 3</li>
+            </ul>
+        </div>
+        <div class="column" id="column2">
+            <div class="content-display">
+                <h2>Project List</h2>
+            </div>
+            <!-- 第二列内容 -->
+            <ul class="hierarchy-list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+        <div class="column" id="column3">
+            <div class="content-display">
+                <h2>Test List</h2>
+            </div>
+            <!-- 第三列内容 -->
+            <ul class="hierarchy-list">
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+                <li>Subitem C</li>
+            </ul>
+        </div>
+        <div class="column" id="column4">
+            <!-- 第四列内容 -->
+            <div class="content-display">
+                <h2>Content Display</h2>
+            </div>
+            <button id="toggle-dark-mode">Toggle Dark Mode</button>
+            <button id="reset-to-system">Reset to System Theme</button>
+        </div>
+    </div>
+    <script src="./renderer.js"></script>
+</body>
+</html>

@@ -15,8 +15,19 @@ function createWindow () {
   // add window icon
   mainWindow.setIcon(path.join(__dirname, 'assets/logo.png'))
 
+      // 设置Content Security Policy
+  mainWindow.webContents.session.webRequest.onHeadersReceived((details, callback) => {
+    callback({
+      responseHeaders: {
+        ...details.responseHeaders,
+        'Content-Security-Policy': ["default-src 'self'"]
+      }
+    });
+  });
+
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  // mainWindow.loadFile('index.html')
+  mainWindow.loadFile('main.html')
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
