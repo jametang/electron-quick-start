@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-packager . Demo --win --out ../myClient --arch=x64 --app-version=0.0.1 --asar"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -18,5 +19,19 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^27.0.3"
+  },
+  "build": {
+    "appId": "com.mid.ymcalc",
+    "copyright": "melotang",
+    "productName": "YMCalc",
+    "icon": "../res/logo.png",
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-packager": "^17.1.2"
   }
 }
